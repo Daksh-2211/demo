@@ -1,7 +1,7 @@
 version: 0.0
 os: linux
 files:
-  - source: cicd/index.html
+  - source: cicd/vansh.html
     destination: /var/www/html
 hooks:
   BeforeInstall:
