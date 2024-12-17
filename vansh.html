@@ -5,65 +5,155 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CI/CD Project Showcase</title>
     <style>
-        /* General Reset */
+        /* Google Font Import */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+        /* General Styles */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: 'Poppins', sans-serif;
         }
 
         body {
-            background-color: #222;
+            background: linear-gradient(to right, #8e44ad, #3498db);
             color: #fff;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
+            overflow-x: hidden;
         }
 
-        .container {
-            background-color: #333;
-            border-radius: 10px;
-            padding: 20px 40px;
-            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
-            width: 90%;
-            max-width: 600px;
+        header {
+            background-color: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            text-align: center;
+            animation: slideDown 1s ease-in-out;
         }
 
         h1 {
-            font-size: 2rem;
-            margin-bottom: 15px;
-            color: #ffcc00;
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
         }
 
         p {
-            font-size: 1rem;
-            line-height: 1.5;
-            margin-bottom: 20px;
+            font-size: 1.1rem;
+            margin-top: 10px;
+            opacity: 0.9;
         }
 
-        .btn {
-            display: inline-block;
-            padding: 10px 20px;
-            font-size: 1rem;
+        /* Project Section */
+        .project-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 40px auto;
+            text-align: center;
+            animation: fadeIn 1.5s ease-in;
+        }
+
+        .project-box {
+            background: #2c3e50;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+            padding: 25px;
+            max-width: 800px;
+            margin: 20px;
+            animation: bounceIn 1.5s ease-out;
+        }
+
+        .project-title {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #e67e22;
+        }
+
+        .description {
+            margin: 20px 0;
+            font-size: 1.1rem;
+            color: #ecf0f1;
+        }
+
+        button {
+            background-color: #e74c3c;
             color: #fff;
-            background-color: #ff5733;
-            text-decoration: none;
+            border: none;
+            padding: 10px 20px;
             border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
         }
 
-        .btn:hover {
-            background-color: #c70039;
+        button:hover {
+            background-color: #c0392b;
+        }
+
+        /* Footer */
+        footer {
+            background-color: rgba(0, 0, 0, 0.5);
+            text-align: center;
+            padding: 10px;
+            margin-top: 40px;
+        }
+
+        /* Animations */
+        @keyframes slideDown {
+            0% {
+                transform: translateY(-100px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes bounceIn {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-20px);
+            }
+            60% {
+                transform: translateY(-10px);
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>CI/CD Project Showcase</h1>
-        <p>This page demonstrates the Continuous Integration and Continuous Deployment pipeline with smooth delivery and automation. Explore how automation accelerates the development process!</p>
-        <a href="#" class="btn">Learn More</a>
-    </div>
+    <!-- Header -->
+    <header>
+        <h1>CI/CD Pipeline Project</h1>
+        <p>Automating Deployment with AWS CodePipeline, CodeBuild, and CodeDeploy</p>
+    </header>
+
+    <!-- Project Section -->
+    <section class="project-container">
+        <div class="project-box">
+            <div class="project-title">Project Overview</div>
+            <div class="description">
+                This project automates application deployment using <strong>AWS CI/CD services</strong>. 
+                By integrating CodePipeline, CodeBuild, and CodeDeploy, the project ensures smooth and automated deployment 
+                to EC2 or ECS environments. Docker images are built and deployed with notification alerts.
+            </div>
+            <button onclick="alert('Congratulations on completing your CI/CD project!')">Celebrate</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Vansh Umraliya | CI/CD Project Showcase</p>
+    </footer>
 </body>
 </html>
